@@ -7,9 +7,12 @@ jobs:
         MRUBY_VERSION: 3.1.0
     steps:
       - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
       - name: Install packages
         run: | 
           sudo apt-get -qq update
-          sudo apt-get -qq install rake bison git gperf clang cargo
+          sudo apt-get -qq install rake bison git gperf clang
       - name: Test
         run: rake test
