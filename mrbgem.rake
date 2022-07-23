@@ -4,4 +4,6 @@ MRuby::Gem::Specification.new('mruby-hohho') do |spec|
 
   spec.linker.libraries << 'hohho_ext'
   spec.linker.library_paths << '../lib' # ./mruby から見た path
+
+  spec.linker.libraries << 'pthread'
 end
