@@ -10,6 +10,6 @@ jobs:
       - name: Install packages
         run: | 
           sudo apt-get -qq update
-          sudo apt-get -qq install rake bison git gperf
+          sudo apt-get -qq install rake bison git gperf clang rust
       - name: Test
         run: rake test
