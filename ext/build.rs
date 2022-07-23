@@ -30,6 +30,8 @@ fn main() {
         // included header files changed.
         .parse_callbacks(Box::new(bindgen::CargoCallbacks))
         .blocklist_type("_bindgen_ty_1")
+        .blocklist_type("u128")
+        .blocklist_type("i128")
         // Finish the builder and generate the bindings.
         .generate()
         // Unwrap the Result and panic on failure.
