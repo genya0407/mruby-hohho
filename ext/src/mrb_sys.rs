@@ -13,7 +13,7 @@ include!("../generated/mruby.rs");
  *      The number of required arguments.
  */
 #[inline]
-pub fn MRB_ARGS_REQ(n: uint) -> mrb_aspec {
+pub fn MRB_ARGS_REQ(n: u32) -> mrb_aspec {
     (((n) & 0x1f) << 18)
 }
 
@@ -24,7 +24,7 @@ pub fn MRB_ARGS_REQ(n: uint) -> mrb_aspec {
  *      The number of optional arguments.
  */
 #[inline]
-pub fn MRB_ARGS_OPT(n: uint) -> mrb_aspec {
+pub fn MRB_ARGS_OPT(n: u32) -> mrb_aspec {
     (((n) & 0x1f) << 13)
 }
 
@@ -37,7 +37,7 @@ pub fn MRB_ARGS_OPT(n: uint) -> mrb_aspec {
  *      The number of optional arguments.
  */
 #[inline]
-pub fn MRB_ARGS_ARG(n1: uint, n2: uint) -> mrb_aspec {
+pub fn MRB_ARGS_ARG(n1: u32, n2: u32) -> mrb_aspec {
     (MRB_ARGS_REQ(n1) | MRB_ARGS_OPT(n2))
 }
 
@@ -49,13 +49,13 @@ pub fn MRB_ARGS_REST() -> mrb_aspec {
 
 /** required arguments after rest */
 #[inline]
-pub fn MRB_ARGS_POST(n: uint) -> mrb_aspec {
+pub fn MRB_ARGS_POST(n: u32) -> mrb_aspec {
     (((n) & 0x1f) << 7)
 }
 
 /** keyword arguments (n of keys, kdict) */
 #[inline]
-pub fn MRB_ARGS_KEY(n1: uint, n2: uint) -> mrb_aspec {
+pub fn MRB_ARGS_KEY(n1: u32, n2: u32) -> mrb_aspec {
     ((((n1) & 0x1f) << 2) | (if (n2 != 0) { (1 << 1) } else { 0 }))
 }
 
