@@ -1,0 +1,7 @@
+name: mruby-hohho
+description: Hohho class
+author: Yusuke Sangenya
+website: https://github.com/eva/mruby-hohho
+protocol: git
+repository: https://github.com/eva/mruby-hohho.git
+license: MIT
