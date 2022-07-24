@@ -1,4 +1,4 @@
-# mruby-hohho   [![build](https://github.com/eva/mruby-hohho/actions/workflows/ci.yml/badge.svg)](https://github.com/eva/mruby-hohho/actions/workflows/ci.yml)
+# mruby-hohho   [![build](https://github.com/genya0407/mruby-hohho/actions/workflows/ci.yml/badge.svg)](https://github.com/genya0407/mruby-hohho/actions/workflows/ci.yml)
 Hohho class
 
 ## install by mrbgems
